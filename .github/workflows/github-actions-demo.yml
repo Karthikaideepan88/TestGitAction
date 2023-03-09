@@ -30,5 +30,6 @@ jobs:
           git remote update
           git fetch 
           git checkout rebase-test
+          git commit -m "initial commit or whatever message for first commit"
           git rebase develop
           git push -f origin rebase-test
