@@ -29,4 +29,4 @@ jobs:
           git init
           git add time.txt
           git commit -m "new date commit"
-          git push -u origin Test
+          git push -u origin develop
