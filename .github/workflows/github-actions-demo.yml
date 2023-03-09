@@ -10,4 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo The PR was merged
+        # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
+        git --version
+        git config user.name "GitHub Actions Bot"
+        git config user.email "<>"
+        git status
+        git tag
+        git describe
