@@ -27,6 +27,8 @@ jobs:
         run: |
           # Stage the file, commit and push
           git init
-          git checkout origin/rebase-test
+          git remote update
+          git fetch 
+          git checkout rebase-test
           git rebase develop
           git push -f origin rebase-test
