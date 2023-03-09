@@ -26,6 +26,7 @@ jobs:
       - name: commit
         run: |
           # Stage the file, commit and push
+          git init
           git add time.txt
           git commit -m "new date commit"
-          git push origin Test
+          git push -u origin Test
