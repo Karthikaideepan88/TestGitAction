@@ -27,6 +27,8 @@ jobs:
         run: |
           # Stage the file, commit and push
           git init
-          git add time.txt
+          git checkout rebase-test
+          git rebase develop
+          git push -f origin rebase-test
+ 
           git commit -m "new date commit"
-          git push -u origin develop
