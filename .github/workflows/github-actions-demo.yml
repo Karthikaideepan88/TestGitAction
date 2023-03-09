@@ -1,20 +1,13 @@
 on:
-  issues:
-    types:
-      - closed
   pull_request:
-    types:
-      - closed
+    branches: 
+      - develop
+    types: [closed]
 
 jobs:
-  state_event_type:
+  if_merged:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
-    - name: if_issue
-      if: github.event.issue
-      run: |
-        echo An issue was closed
-    - name: if_pr
-      if: github.event.pull_request
-      run: |
-        echo A pull request was closed
+    - run: |
+        echo The PR was merged
